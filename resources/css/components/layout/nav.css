@@ -13,12 +13,13 @@
     border-radius: var(--radius-full);
     padding: 8px;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 95vw;
 }
 
 .floating-nav__list {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: min(10px, 3vw);
     list-style: none;
     margin: 0;
     padding: 0;
