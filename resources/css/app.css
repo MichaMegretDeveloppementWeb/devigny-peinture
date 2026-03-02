@@ -169,7 +169,6 @@ button,
     background: #ffffff2b;
     color: white;
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 }
 
 .badge--location {
@@ -267,7 +266,6 @@ button,
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     background: linear-gradient(177deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.63));
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
@@ -289,7 +287,6 @@ button,
     border-radius: var(--radius-full);
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     color: white;
     transition: transform 0.5s ease;
     flex-shrink: 0;
