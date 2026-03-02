@@ -19,7 +19,7 @@
 .floating-nav__list {
     display: flex;
     align-items: center;
-    gap: min(10px, 2vw);
+    gap: min(8px, 1vw);
     list-style: none;
     margin: 0;
     padding: 0;
