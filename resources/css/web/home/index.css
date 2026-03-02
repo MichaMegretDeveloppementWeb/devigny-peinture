@@ -1,0 +1,8 @@
+/* ============================================
+   Page Accueil — Entry point
+   ============================================ */
+
+@import './hero.css';
+@import './highlights.css';
+@import './services.css';
+@import './artisan.css';

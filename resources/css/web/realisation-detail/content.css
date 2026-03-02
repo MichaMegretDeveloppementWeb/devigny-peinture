@@ -1,0 +1,125 @@
+/* ============================================
+   Realisation Detail — White Card Wrapper
+   Carte blanche contenant tout le contenu
+   ============================================ */
+
+.realisation-detail-wrapper {
+    background: var(--color-bg-surface);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Nav row */
+.realisation-detail-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.realisation-detail-nav__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-bg-dark-tertiary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.realisation-detail-nav__back:hover {
+    color: var(--color-text-heading);
+}
+
+/* Header: title + location */
+.realisation-detail-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.realisation-detail-header__title {
+    font-size: 48px;
+    line-height: 1.21;
+    font-weight: 300;
+    color: var(--color-text-heading);
+}
+
+.realisation-detail-header__location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-text-body);
+}
+
+.realisation-detail-header__location svg {
+    flex-shrink: 0;
+    color: var(--color-bg-dark-tertiary);
+}
+
+/* Featured image */
+.realisation-detail-featured {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.realisation-detail-featured__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.realisation-detail-featured__placeholder {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-lg);
+}
+
+/* Rich text */
+.realisation-detail-text__paragraph {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-text-body);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.realisation-detail-text__paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* CTA action */
+.realisation-detail-action {
+    /* Button styled globally */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .realisation-detail-header__title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 640px) {
+    .realisation-detail-wrapper {
+        padding: 20px;
+        gap: 32px;
+    }
+
+    .realisation-detail-header__title {
+        font-size: 32px;
+    }
+
+    .realisation-detail-featured__placeholder {
+        height: 250px;
+    }
+}

@@ -1,0 +1,21 @@
+/* ============================================
+   Home — Services Section (grille cartes)
+   ============================================ */
+
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.home-services__cta {
+    text-align: center;
+    margin-top: 5em;
+}
+
+@media (max-width: 768px) {
+    .home-services-grid {
+        grid-template-columns: 1fr;
+    }
+}

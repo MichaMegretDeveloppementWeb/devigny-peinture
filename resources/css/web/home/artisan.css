@@ -1,0 +1,150 @@
+/* ============================================
+   Home — Artisan Section (aperçu à propos)
+   Layout asymétrique + carrousel auto-slide
+   ============================================ */
+
+.home-artisan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Carrousel */
+.home-artisan__carousel {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 6/5;
+}
+
+.home-artisan__carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.home-artisan__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.home-artisan__slide--active {
+    opacity: 1;
+}
+
+.home-artisan__slide-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-artisan__slide-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Dots navigation */
+.home-artisan__dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.home-artisan__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-artisan__dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.home-artisan__dot--active {
+    background-color: #fff;
+    transform: scale(1.25);
+}
+
+/* Contenu droite */
+.home-artisan__content {
+    padding: 24px;
+    background: white;
+    border-radius: 2em;
+}
+
+.home-artisan__content .badge {
+    margin-bottom: 12px;
+}
+
+.home-artisan__heading {
+    font-size: 38px;
+    line-height: 1.21;
+    font-weight: 300;
+    color: var(--color-text-heading);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.home-artisan__description {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-text-body);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.home-artisan__accordion {
+    margin-bottom: 24px;
+}
+
+.home-artisan__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-text-heading);
+    transition: color 0.2s ease;
+}
+
+.home-artisan__link:hover {
+    color: var(--color-text-body);
+}
+
+.home-artisan__link-icon {
+    margin-left: 8px;
+}
+
+@media (max-width: 1024px) {
+    .home-artisan {
+        grid-template-columns: 1fr;
+    }
+
+    .home-artisan__heading {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-artisan__heading {
+        font-size: 26px;
+    }
+
+    .home-artisan__content {
+        padding: 16px;
+    }
+}

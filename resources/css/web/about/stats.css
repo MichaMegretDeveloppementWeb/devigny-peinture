@@ -1,0 +1,42 @@
+/* ============================================
+   About — Stats Section
+   ============================================ */
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.about-stats__number {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: var(--color-text-heading);
+}
+
+.about-stats__label {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .about-stats__number {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
